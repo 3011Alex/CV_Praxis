@@ -12,23 +12,26 @@ Präsentation/
     ├── anisotropic.py              # Anisotrope Filter (Perona-Malik)
     ├── isotropic.py                # Isotrope Filter (Gaussian, Median, etc.)
     ├── comparison.py               # Direkter Vergleich beider Filtertypen
-    ├── filter_praesentation.bat    # Ein-Klick Launcher für Präsentation
     ├── siemens_star.png            # Testbild (Siemens-Stern)
-    └── *.png                       # Generierte Vergleichsbilder
+    ├── direct_comparison.png       # Hauptvergleich (generiert)
+    ├── isotropic_comparison.png    # Isotrope Filter Details (generiert)
+    └── anisotropic_comparison.png  # Anisotrope Filter Details (generiert)
 ```
 
 ### Schnellstart für Präsentation
 
-1. **Einfache Ausführung:**
-   ```
-   Doppelklick auf filter_praesentation.bat
-   ```
-   
-2. **Manuelle Ausführung:**
-   ```bash
-   cd "Präsentation/Anisotropischer Filter Vergleich"
-   python comparison.py
-   ```
+**Manuelle Ausführung:**
+```bash
+cd "Präsentation/Anisotropischer Filter Vergleich"
+python comparison.py
+```
+
+**Alle Skripte einzeln ausführen:**
+```bash
+python isotropic.py      # Verschiedene isotrope Filter
+python anisotropic.py    # Anisotrope Diffusion Details  
+python comparison.py     # Direkter Vergleich (empfohlen)
+```
 
 ### Was wird demonstriert?
 
@@ -38,16 +41,27 @@ Präsentation/
 
 ### Ergebnisse
 
-- `direct_comparison.png` - Hauptvergleich für Präsentationen
+Die Skripte generieren folgende Visualisierungen:
+
+- `direct_comparison.png` - **Hauptvergleich für Präsentationen** (empfohlen)
 - `isotropic_comparison.png` - Details verschiedener isotroper Filter  
-- `anisotropic_comparison.png` - Details anisotroper Diffusion
+- `anisotropic_comparison.png` - Details anisotroper Diffusion mit verschiedenen Parametern
 
-### Abhängigkeiten
+Alle Bilder werden automatisch gespeichert und können direkt in Präsentationen verwendet werden.
 
-- Python 3.x
-- numpy
-- opencv-python
-- matplotlib
+### Installation & Ausführung
+
+**Voraussetzungen:**
+```bash
+pip install numpy opencv-python matplotlib
+```
+
+**Ausführung:**
+```bash
+git clone https://github.com/3011Alex/CV_Praxis.git
+cd CV_Praxis/Präsentation/Anisotropischer\ Filter\ Vergleich
+python comparison.py
+```
 
 ### Filter-Algorithmen
 
